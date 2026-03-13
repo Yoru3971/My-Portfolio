@@ -1,0 +1,90 @@
+:root {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --accent: #3b82f6;
+  --border: rgba(255, 255, 255, 0.08);
+  --nav-bg: rgba(15, 23, 42, 0.8); /* Dark mode navbar */
+}
+
+body.light-theme {
+  --bg: #f8fafc; /* Softer, slightly off-white background */
+  --text: #334155;
+  --accent: #4f46e5;
+  --border: rgba(15, 23, 42, 0.1);
+  --nav-bg: rgba(255, 255, 255, 0.85); /* Clean white frosted glass */
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+section {
+  scroll-margin-top: 10rem; 
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.section {
+  padding: 10rem 2rem;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+/* =========================================
+   GLOBAL CHIP STYLES (Used in Skills & Projects)
+   ========================================= */
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.chip {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 0.6rem;
+  background-color: transparent;
+  color: var(--text);
+  border: 0.1rem solid var(--border);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: default;
+}
+
+.chip i {
+  color: var(--accent);
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-0.2rem);
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+/* =========================================
+   TEXT HIGHLIGHT UTILITY
+   ========================================= */
+.highlight {
+  color: var(--accent);
+  font-weight: 600; /* Makes the highlighted text pop out slightly more */
+}
